@@ -1,0 +1,1 @@
+appium --session-override --nodeconfig D:\\Grid\\SamsungJ3.json --port 5000 --bootstrap-port 2252
