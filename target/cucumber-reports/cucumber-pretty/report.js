@@ -1,49 +1,45 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("login/invalid_login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("sign_up.feature");
 formatter.feature({
   "line": 1,
-  "name": "Login page scenarios",
+  "name": "Sign up page scenarios",
   "description": "",
-  "id": "login-page-scenarios",
+  "id": "sign-up-page-scenarios",
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 367386,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 238253,
+  "duration": 470089,
   "status": "passed"
 });
 formatter.scenario({
   "line": 4,
-  "name": "User is not allowed to login with invalid credentials",
+  "name": "User inputs credentials to create account",
   "description": "",
-  "id": "login-page-scenarios;user-is-not-allowed-to-login-with-invalid-credentials",
+  "id": "sign-up-page-scenarios;user-inputs-credentials-to-create-account",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
   "line": 5,
-  "name": "User is on login page",
+  "name": "User is on sign up page",
   "keyword": "Given "
 });
 formatter.step({
   "line": 6,
-  "name": "Enter invalid credentials",
+  "name": "User enter valid credentials",
   "keyword": "When "
 });
 formatter.step({
   "line": 7,
-  "name": "User is shown error message",
+  "name": "User click on Sign up button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "WordPressLoginScenarioSteps.gotoLoginPage()"
+  "location": "WordPressSignUpScenarioSteps.gotoLoginPage()"
 });
 formatter.result({
-  "duration": 958383032,
+  "duration": 1080510822,
   "status": "passed"
 });
 formatter.match({
-  "location": "WordPressLoginScenarioSteps.enterInvalidData()"
+  "location": "WordPressSignUpScenarioSteps.enterInvalidData()"
 });

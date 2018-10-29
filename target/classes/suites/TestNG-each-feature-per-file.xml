@@ -17,6 +17,6 @@
         <classes>
             <class name="vn.teko.appium.cucumber.test.runners.RunLoginFeature" />
         </classes>
-    </test>
- 
+    </test> 
 </suite>
+

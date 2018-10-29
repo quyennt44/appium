@@ -1,4 +1,4 @@
-package vn.teko.appium.cucumber.test.runners;
+package vn.teko.appium.cucumber.test.runners.signup;
 
 
 import org.testng.annotations.AfterClass;
