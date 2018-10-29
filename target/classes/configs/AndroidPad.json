@@ -4,7 +4,7 @@
 			"deviceName": "AndroidPad",
 			"platformName": "Android",
 			"browserName": "Android-Pad",
-			"platformVersion": "6.0",
+			"platformVersion": "7.0",
 			"maxInstances": 1
 		}
 	],
