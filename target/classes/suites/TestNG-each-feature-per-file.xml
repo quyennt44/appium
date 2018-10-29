@@ -7,7 +7,7 @@
         <parameter name="deviceName" value="SamsungJ3" />
         <parameter name="platformVersion" value="5.1.1" />
         <classes>
-            <class name="vn.teko.appium.cucumber.test.runners.RunSignupFeature" />
+            <class name="vn.teko.appium.cucumber.test.runners.signup.RunSignupFeature" />
         </classes>
     </test>
  
@@ -15,7 +15,7 @@
         <parameter name="deviceName" value="AndroidPad" />
         <parameter name="platformVersion" value="7.0" />
         <classes>
-            <class name="vn.teko.appium.cucumber.test.runners.RunLoginFeature" />
+            <class name="vn.teko.appium.cucumber.test.runners.login.RunLoginFeature" />
         </classes>
     </test> 
 </suite>
