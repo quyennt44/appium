@@ -1,0 +1,69 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 360212,
+              "status": "passed"
+            },
+            "match": {
+              "location": "WordPressLoginScenarioSteps.setupLoginSteps()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "User is not allowed to login with invalid credentials",
+        "description": "",
+        "id": "login-page-scenarios;user-is-not-allowed-to-login-with-invalid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2062677298,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on login page",
+            "match": {
+              "location": "WordPressLoginScenarioSteps.gotoLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7146241994,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Enter invalid credentials",
+            "match": {
+              "location": "WordPressLoginScenarioSteps.enterInvalidData()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2601588709,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User is shown error message",
+            "match": {
+              "location": "WordPressLoginScenarioSteps.checkErrorMessage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login page scenarios",
+    "description": "",
+    "id": "login-page-scenarios",
+    "keyword": "Feature",
+    "uri": "invalid_login.feature"
+  }
+]

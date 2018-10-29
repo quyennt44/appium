@@ -1,0 +1,3 @@
+- Config Selenium grid plugin for jenkins:
+ The plugin use selenium-grid version 3.12. There are errors when register nodes.
+ Replace the file selenium-server-standalone-3.12.0 by selenium-server-standalone-3.14.0 under jenkins installation folder C:\Program Files (x86)\Jenkins\plugins\selenium\WEB-INF\lib

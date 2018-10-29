@@ -1,1 +1,0 @@
-appium --session-override --nodeconfig D:\\Grid\\AndroidPad.json --port 5001 --bootstrap-port 2253

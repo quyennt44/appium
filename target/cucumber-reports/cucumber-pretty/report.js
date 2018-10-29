@@ -1,45 +1,57 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("sign_up.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("invalid_login.feature");
 formatter.feature({
   "line": 1,
-  "name": "Sign up page scenarios",
+  "name": "Login page scenarios",
   "description": "",
-  "id": "sign-up-page-scenarios",
+  "id": "login-page-scenarios",
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 470089,
+  "duration": 360212,
   "status": "passed"
 });
 formatter.scenario({
   "line": 4,
-  "name": "User inputs credentials to create account",
+  "name": "User is not allowed to login with invalid credentials",
   "description": "",
-  "id": "sign-up-page-scenarios;user-inputs-credentials-to-create-account",
+  "id": "login-page-scenarios;user-is-not-allowed-to-login-with-invalid-credentials",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
   "line": 5,
-  "name": "User is on sign up page",
+  "name": "User is on login page",
   "keyword": "Given "
 });
 formatter.step({
   "line": 6,
-  "name": "User enter valid credentials",
+  "name": "Enter invalid credentials",
   "keyword": "When "
 });
 formatter.step({
   "line": 7,
-  "name": "User click on Sign up button",
+  "name": "User is shown error message",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "WordPressSignUpScenarioSteps.gotoLoginPage()"
+  "location": "WordPressLoginScenarioSteps.gotoLoginPage()"
 });
 formatter.result({
-  "duration": 1080510822,
+  "duration": 2062677298,
   "status": "passed"
 });
 formatter.match({
-  "location": "WordPressSignUpScenarioSteps.enterInvalidData()"
+  "location": "WordPressLoginScenarioSteps.enterInvalidData()"
+});
+formatter.result({
+  "duration": 7146241994,
+  "status": "passed"
+});
+formatter.match({
+  "location": "WordPressLoginScenarioSteps.checkErrorMessage()"
+});
+formatter.result({
+  "duration": 2601588709,
+  "status": "passed"
+});
 });
