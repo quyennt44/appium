@@ -143,8 +143,7 @@
 	            	<outputDirectory>${project.build.directory}</outputDirectory>
 	        	</environmentVariables>
 		        <suiteXmlFiles>		        	
-		        	<suiteXmlFile>${TestNG-FILE-NAME}</suiteXmlFile>		        				        	    
-		        	<suiteXmlFile>target\surefire-reports\testng-failed.xml</suiteXmlFile>
+		        	<suiteXmlFile>${TestNG-FILE-NAME}</suiteXmlFile>	        	
 		        </suiteXmlFiles>
 		    </configuration>
 		</plugin>                
