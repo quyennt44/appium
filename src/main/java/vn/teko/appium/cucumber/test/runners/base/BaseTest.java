@@ -24,8 +24,8 @@ public class BaseTest {
         System.out.println("TestNG Before");
 
         //Unlock the device if it is locked.
-        final Runtime rt = Runtime.getRuntime();
-        rt.exec("adb shell input keyevent 224");
+//        final Runtime rt = Runtime.getRuntime();
+//        rt.exec("adb shell input keyevent 224");
 
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("deviceName", deviceName);
