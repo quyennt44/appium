@@ -140,9 +140,8 @@
 			    <environmentVariables>
 	            	<outputDirectory>${project.build.directory}</outputDirectory>
 	        	</environmentVariables>
-	        	<testSourceDirectory>src/main/resources/suites</testSourceDirectory> 
 		        <suiteXmlFiles>		        	
-		        	<suiteXmlFile>${TestNG-FILE-NAME}</suiteXmlFile>		        	    
+		        	<suiteXmlFile>src/main/resources/suites/${TestNG-FILE-NAME}</suiteXmlFile>		        	    
 		        </suiteXmlFiles>
 		    </configuration>
 		</plugin>                
