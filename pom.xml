@@ -141,7 +141,7 @@
 	            	<outputDirectory>${project.build.directory}</outputDirectory>
 	        	</environmentVariables>
 		        <suiteXmlFiles>		        	
-		        	<file>src/main/resources/suites/TestNG-each-feature-per-file.xml</file>		        
+		        	<file>src/main/resources/suites/{TestNG-FILE-NAME}</file>		        
 		        </suiteXmlFiles>
 		    </configuration>
 		</plugin>                
