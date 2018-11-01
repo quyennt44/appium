@@ -45,7 +45,7 @@ public class RunLoginFeature extends BaseTest {
     @Test
     public void testMethod1() {
     	System.out.println("This is test method 1");;
-    	assertFalse(true);
+//    	assertFalse(true);
     }
 
     @DataProvider
