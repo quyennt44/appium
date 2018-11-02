@@ -1,8 +1,6 @@
 package vn.teko.appium.cucumber.test.runners.login;
 
 
-import static org.testng.Assert.assertFalse;
-
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -41,12 +39,7 @@ public class RunLoginFeature extends BaseTest {
         System.out.println(cucumberFeature.getCucumberFeature());
         testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
     }
-    
-    @Test
-    public void testMethod1() {
-    	System.out.println("This is test method 1");;
-//    	assertFalse(true);
-    }
+        
 
     @DataProvider
     public Object[][] features() {
