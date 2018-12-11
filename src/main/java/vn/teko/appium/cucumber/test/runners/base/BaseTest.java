@@ -19,8 +19,8 @@ public class BaseTest {
 
     @SuppressWarnings("rawtypes")
 	@BeforeMethod
-    @Parameters({"deviceName", "platformVersion"})
-    public void setup (String deviceName, String platformVersion) throws IOException {
+    @Parameters({"deviceName", "platformVersion", "udid"})
+    public void setup (String deviceName, String platformVersion, String udid) throws IOException {
         System.out.println("TestNG Before");
 
         //Unlock the device if it is locked.
@@ -30,6 +30,7 @@ public class BaseTest {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("deviceName", deviceName);
         caps.setCapability("platformVersion", platformVersion);
+        caps.setCapability("udid", udid);
         caps.setCapability("platformName", FileReaderManager.getInstance().getConfigReader().getPlatformName());
         caps.setCapability("appPackage", FileReaderManager.getInstance().getConfigReader().getAppPackage());
         caps.setCapability("appActivity",FileReaderManager.getInstance().getConfigReader().getAppActivity());

@@ -6,6 +6,7 @@
    <test name="Test-SamsungJ3" parallel="classes" thread-count="1">
         <parameter name="deviceName" value="SamsungJ3" />
         <parameter name="platformVersion" value="5.1.1" />
+        <parameter name="udid" value="42006fd2cc118400" />
         <classes>
             <class name="vn.teko.appium.cucumber.test.runners.RunAllFeatures" />
         </classes>
@@ -13,7 +14,8 @@
  
    <test name="Test-AndroidPad" parallel="classes" thread-count="1">
         <parameter name="deviceName" value="AndroidPad" />
-        <parameter name="platformVersion" value="7.0" />
+        <parameter name="platformVersion" value="5.1.1" />
+        <parameter name="udid" value="5200e90dfa179400" />
         <classes>
             <class name="vn.teko.appium.cucumber.test.runners.RunAllFeatures" />
         </classes>
