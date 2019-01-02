@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh "clean test -DTestNG-FILE-NAME=src\main\resources\suites\TestNG-all_test.xml"	
+                sh "clean test -DTestNG-FILE-NAME=src/main/resources/suites/TestNG-each-feature-per-file.xml"	
             }
         }     
     }
