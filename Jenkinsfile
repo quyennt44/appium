@@ -1,4 +1,3 @@
-set -e
 pipeline {
     agent any
     stages {
