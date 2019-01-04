@@ -12,6 +12,14 @@ pipeline {
                 sh "docker-compose up -d"
             }
         }
+	
+	stage ("Wait for container starting") {
+          steps{
+           echo "Waiting for deployment to complete prior starting testing"
+           sleep 300
+           }
+        }
+
         stage('Test') {
             steps {
                 sh "mvn clean test -DTestNG-FILE-NAME=src/main/resources/suites/TestNG-each-feature-per-file.xml"	
