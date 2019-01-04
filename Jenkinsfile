@@ -16,7 +16,7 @@ pipeline {
 	stage ("Wait for container starting") {
           steps{
            echo "Waiting for deployment to complete prior starting testing"
-           sleep 300
+           sleep 120 //seconds
            }
         }
 
@@ -26,6 +26,14 @@ pipeline {
             }
         }     
     }
+
+      stage('Stop docker') {
+            steps {
+                sh "docker-compose down"	
+            }
+        }     
+    }
+	
     post {
         always {
              step([$class: 'Publisher', reportFilenamePattern: '**/testng-results.xml'])
