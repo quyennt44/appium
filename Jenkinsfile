@@ -25,13 +25,12 @@ pipeline {
                 sh "mvn clean test -DTestNG-FILE-NAME=src/main/resources/suites/TestNG-each-feature-per-file.xml"	
             }
         }     
-    }
+    
 
       stage('Stop docker') {
             steps {
                 sh "docker-compose down"	
-            }
-        }     
+            }             
     }
 	
     post {
