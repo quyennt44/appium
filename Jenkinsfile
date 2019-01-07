@@ -9,7 +9,7 @@ pipeline {
 
         stage('Start docker'){
             steps{
-                sh "docker-compose up -d"
+                sh "docker-compose up -d ––scale real-device=2"
             }
         }
 	
