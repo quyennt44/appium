@@ -1,26 +1,38 @@
-# Note: It requires docker-compose 1.6.0+
-#
-# Usage: docker-compose up -d
-version: '2'
-
-services:
-  # Selenium hub
-  selenium_hub:
-    image: selenium/hub
+version: "3"
+services: 
+   seleniumhub:
+    image: selenium/hub:3.14.0-curium
     ports:
-      - 4444:4444
+       - 4444:4444
+    expose:
+       - "22"
+    container_name: hub
+    networks:
+       - myseleniumnet
 
-  # Appium Docker Android  
-  appium_android_device:
-    image: appium/appium
-    depends_on:
-      - selenium_hub
-    privileged: true
-    volumes:
-      - /dev/bus/usb:/dev/bus/usb
-      - /home/jenkins/android:/root/.android
-    environment:
-      - CONNECT_TO_GRID=true
-      - SELENIUM_HOST=selenium_hub
-      # Enable it for msite testing
-#- BROWSER_NAME=chrome
+   SamsungJ3:
+     image: appium/appium
+     privileged: true
+     volumes:
+       - /dev/bus/usb:/dev/bus/usb
+       - ~/.android:/root/.android
+     environment:
+       - CONNECT_TO_GRID=true
+     networks:
+        - myseleniumnet
+
+   Tablet:
+     image: appium/appium
+     privileged: true
+     volumes:
+       - /dev/bus/usb:/dev/bus/usb
+       - /home/jenkins/android:/root/.android
+     environment:
+       - CONNECT_TO_GRID=true
+     networks:
+        - myseleniumnet
+    
+networks:
+   myseleniumnet:
+      driver: bridge
+
