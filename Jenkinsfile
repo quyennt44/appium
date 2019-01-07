@@ -9,7 +9,7 @@ pipeline {
 
         stage('Start docker'){
             steps{
-                sh "docker-compose up -d --scale real-device=2"
+                sh "docker-compose up -d --scale appium_android_device=2"
             }
         }
 	
