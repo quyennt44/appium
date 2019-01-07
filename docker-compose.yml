@@ -10,7 +10,7 @@ services:
     networks:
        - myseleniumnet
 
-   SamsungJ3:
+   real-device:
      image: appium/appium
      privileged: true
      volumes:
@@ -18,17 +18,7 @@ services:
        - /home/jenkins/android:/root/.android
      environment:
        - CONNECT_TO_GRID=true
-     networks:
-        - myseleniumnet
-
-   Tablet:
-     image: appium/appium
-     privileged: true
-     volumes:
-       - /dev/bus/usb:/dev/bus/usb
-       - /home/jenkins/android:/root/.android
-     environment:
-       - CONNECT_TO_GRID=true
+       - SELENIUM_HOST=seleniumhub
      networks:
         - myseleniumnet
     
