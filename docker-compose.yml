@@ -15,7 +15,7 @@ services:
      privileged: true
      volumes:
        - /dev/bus/usb:/dev/bus/usb
-       - ~/.android:/root/.android
+       - /home/jenkins/android:/root/.android
      environment:
        - CONNECT_TO_GRID=true
      networks:
