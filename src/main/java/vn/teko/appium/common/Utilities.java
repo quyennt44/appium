@@ -2,7 +2,7 @@ package vn.teko.appium.common;
 
 public class Utilities {
 
-	private static final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	private static final String ALPHA_NUMERIC_STRING = "abcdefghijkhlmnopqrstuvwxyz0123456789";
 
 	public static String randomAlphaNumeric(int count) {
 		StringBuilder builder = new StringBuilder();
