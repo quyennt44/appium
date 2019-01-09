@@ -16,7 +16,7 @@ pipeline {
 	stage ("Wait for container starting") {
           steps{
            echo "Waiting for deployment to complete prior starting testing"
-           sleep 120 //seconds
+           sleep 60 //seconds
            }
         }
 
