@@ -1,0 +1,28 @@
+version: "3"
+services: 
+   seleniumhub:
+    image: selenium/hub:3.14.0-curium
+    ports:
+       - 4444:4444
+    expose:
+       - "22"
+    container_name: hub
+    networks:
+       - myseleniumnet
+
+   real-device:
+     image: appium/appium
+     privileged: true
+     volumes:
+       - /dev/bus/usb:/dev/bus/usb
+       - /home/jenkins/android:/root/.android
+     environment:
+       - CONNECT_TO_GRID=true
+       - SELENIUM_HOST=seleniumhub
+     networks:
+        - myseleniumnet
+    
+networks:
+   myseleniumnet:
+      driver: bridge
+
