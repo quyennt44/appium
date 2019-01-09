@@ -1,9 +1,5 @@
 pipeline {
-    agent any
-    //Waiting time	
-    parameters {
-        string(defaultValue: 60, description: 'time waiting for docker starting', name: 'waitTime')
-    }
+    agent any    
 
     stages {
         stage('Check out') {
@@ -22,7 +18,7 @@ pipeline {
 	stage ("Wait for container starting") {
           steps{
            echo "Waiting for deployment to complete prior starting testing"
-           sleep '${params.waitTime}' //seconds
+           sleep 60 //seconds
            }
         }
 
