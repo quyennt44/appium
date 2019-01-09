@@ -22,7 +22,7 @@ pipeline {
 	stage ("Wait for container starting") {
           steps{
            echo "Waiting for deployment to complete prior starting testing"
-           sleep ${params.waitTime} //seconds
+           sleep '${params.waitTime}' //seconds
            }
         }
 
