@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    //Waiting time	
+    parameters {
+        string(defaultValue: 60, description: 'time waiting for docker starting', name: 'waitTime')
+    }
+
     stages {
         stage('Check out') {
             steps {
@@ -9,6 +14,7 @@ pipeline {
 
         stage('Start docker'){
             steps{
+                sh "adb kill-server"
                 sh "docker-compose up -d"
             }
         }
@@ -16,7 +22,7 @@ pipeline {
 	stage ("Wait for container starting") {
           steps{
            echo "Waiting for deployment to complete prior starting testing"
-           sleep 60 //seconds
+           sleep ${params.waitTime} //seconds
            }
         }
 
