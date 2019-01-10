@@ -17,7 +17,7 @@ public class BasePage {
 
     public BasePage (@SuppressWarnings("rawtypes") AndroidDriver driver){
         this.driver = driver;
-        wait = new WebDriverWait(driver, 15);
+        wait = new WebDriverWait(driver, 30);
     }
 
     protected void waitAndClick (By by) {

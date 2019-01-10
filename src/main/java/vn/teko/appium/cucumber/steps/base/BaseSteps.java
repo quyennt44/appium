@@ -10,7 +10,7 @@ public class BaseSteps {
     //Screen Classes Initialization
     protected void setupCucumber () {
         System.out.println("Cucumber Base Test Before-login-test-cucumber");
-        wait = new WebDriverWait(ThreadLocalDriver.getTLDriver(), 10);       
+        wait = new WebDriverWait(ThreadLocalDriver.getTLDriver(), 30);       
         /*//Unlock the device if it is locked.
         final Runtime rt = Runtime.getRuntime();
         try {
