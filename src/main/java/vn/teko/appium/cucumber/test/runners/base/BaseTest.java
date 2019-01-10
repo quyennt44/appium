@@ -51,7 +51,7 @@ public class BaseTest {
     @AfterMethod
     public synchronized void teardown(){    	
     	try {
-//    		ThreadLocalDriver.getTLDriver().closeApp();
+    		ThreadLocalDriver.getTLDriver().closeApp();
 //    		ThreadLocalDriver.getTLDriver().quit();
     	}catch(Exception ex){
     		ex.printStackTrace();
