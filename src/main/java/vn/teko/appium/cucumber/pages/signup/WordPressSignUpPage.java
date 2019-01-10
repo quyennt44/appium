@@ -39,6 +39,7 @@ public class WordPressSignUpPage extends BasePage {
 
     public void clickSignUpButton(){
     	try {
+    	  driver.hideKeyboard();
     	  waitVisibility(By.id(createAccountButton_id));    	  
           click(By.id(createAccountButton_id));
     	} catch(Exception ex) {
