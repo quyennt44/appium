@@ -52,7 +52,7 @@ public class BaseTest {
     public synchronized void teardown(){    	
     	try {
     		ThreadLocalDriver.getTLDriver().closeApp();
-    		ThreadLocalDriver.getTLDriver().quit();
+//    		ThreadLocalDriver.getTLDriver().quit();
     	}catch(Exception ex){
     		ex.printStackTrace();
     	}
