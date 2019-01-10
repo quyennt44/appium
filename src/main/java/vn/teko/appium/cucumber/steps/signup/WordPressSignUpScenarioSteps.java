@@ -29,7 +29,7 @@ public class WordPressSignUpScenarioSteps extends BaseSteps {
 	@When("User enter valid credentials")
 	public void enterInvalidData() {
 		wordPressSignUpPage.enterSignUpScreenDetails(Utilities.randomAlphaNumeric(6) + "@gmail.com",
-				Utilities.randomAlphaNumeric(7), Utilities.randomAlphaNumeric(8), Utilities.randomAlphaNumeric(5));
+				Utilities.randomAlphaNumeric(7), Utilities.randomAlphaNumeric(9), Utilities.randomAlphaNumeric(8));
 	}
 
 	@Then("User click on Sign up button")
