@@ -5,6 +5,7 @@ import java.net.URL;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -49,10 +50,18 @@ public class BaseTest {
     }
 
     @AfterMethod
-    public synchronized void teardown(){    	
+    public void teardown(){    	
     	try {
     		ThreadLocalDriver.getTLDriver().closeApp();
 //    		ThreadLocalDriver.getTLDriver().quit();
+    	}catch(Exception ex){
+    		ex.printStackTrace();
+    	}
+    }
+    @AfterClass
+    public void quitDriver(){    	
+    	try {    		
+    		ThreadLocalDriver.getTLDriver().quit();
     	}catch(Exception ex){
     		ex.printStackTrace();
     	}
